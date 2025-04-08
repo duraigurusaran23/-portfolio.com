@@ -1,0 +1,255 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3a5f, #0f3460);
+    color: white;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 20px; 
+    font-size: 18px; 
+    background: linear-gradient(135deg, #1e3a5f, #0f3460); 
+}
+
+.header a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255); 
+    font-weight: bold; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for scaling and shadow */
+
+    }
+.header a:hover {
+        transform: scale(1.05);
+
+}
+
+/* Home Section (Merged About) */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Profile Photo Centered */
+.profile-photo img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+/* About Text Moved Higher */
+.home-text {
+    max-width: 600px;
+    margin-top: -20px; /* Moves content slightly higher */
+}
+
+.home-text h1 {
+    font-size: 36px;
+}
+
+.home-text span {
+    color: #ff7eb3;
+}
+
+.home-text p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+}
+
+.contact .btn {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-container {
+        text-align: center;
+    }
+
+    .profile-photo img {
+        width: 150px;
+    }
+
+    .home-text {
+        text-align: center;
+    }
+
+    .header nav a {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .certificates-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+/* Adjust Home Section for Profile Photo and About Text Side by Side */
+.home-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.home-text {
+    margin-top: 0; /* Reset margin-top */
+    text-align: left;
+    margin-left: 800px;
+}
+
+.profile-photo {
+    margin-right: -400px;
+    margin-left: -200px; /* Move profile photo slightly to the left */
+    margin-top: -20px; /* Move profile photo slightly higher */
+}
+
+.profile-photo img {
+    width: 400px; /* Increase size of profile photo */
+    height: 400px; /* Increase size of profile photo */
+}
+
+.home-text {
+    max-width: 800px; /* Increase max-width to make content larger */
+    margin-top: 0; /* Reset margin-top */
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 400px;
+    margin-top: -150px
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.certificates-card:hover {
+    transform: scale(1.05);
+}
+
+.certificates-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.social-links {
+    margin-top: 20px; 
+    font-size: 24px; 
+    text-align: left; 
+    display: flex; 
+    gap: 20px; 
+}
+.social-links a {
+    text-decoration: none; 
+    color: rgb(255, 255, 255); 
+    display: flex;
+    align-items: center;
+}
+.social-links a img {
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px; 
+}
